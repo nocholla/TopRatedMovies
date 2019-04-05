@@ -17,7 +17,6 @@ import com.nocholla.top.rated.movies.R;
 import com.nocholla.top.rated.movies.util.Constants;
 import com.squareup.picasso.Picasso;
 
-
 public class MoviesRecyclerViewListAdapter extends RecyclerView.Adapter<MoviesRecyclerViewListAdapter.ViewHolder>  {
     private Context context;
     private List<Movie> movieList;
@@ -148,7 +147,6 @@ public class MoviesRecyclerViewListAdapter extends RecyclerView.Adapter<MoviesRe
 
                 }
             });
-
 
         }
 

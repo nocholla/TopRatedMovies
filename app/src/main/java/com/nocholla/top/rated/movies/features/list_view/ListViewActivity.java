@@ -23,7 +23,6 @@ import com.nocholla.top.rated.movies.features.grid_view.GridViewActivity;
 import com.nocholla.top.rated.movies.model.Movie;
 import com.nocholla.top.rated.movies.model.MoviesResponse;
 import com.nocholla.top.rated.movies.util.Constants;
-import java.util.ArrayList;
 import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;

@@ -21,7 +21,6 @@ import com.nocholla.top.rated.movies.adapter.MoviesRecyclerViewGridAdapter;
 import com.nocholla.top.rated.movies.api.ApiClient;
 import com.nocholla.top.rated.movies.api.ApiInterface;
 import com.nocholla.top.rated.movies.features.list_view.ListViewActivity;
-import com.nocholla.top.rated.movies.fragments.BottomSheetFragment;
 import com.nocholla.top.rated.movies.helper.GalleryGridSpacingItemDecoration;
 import com.nocholla.top.rated.movies.model.Movie;
 import com.nocholla.top.rated.movies.model.MoviesResponse;
