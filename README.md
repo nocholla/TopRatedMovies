@@ -20,6 +20,16 @@ This App shows the current top rated movies in the TMDB database.
 14. Wait for build to complete.
 15. If successful, APK will be installed on Android Phone or Android Studio Emulator for App to be tested.
 
+# Libraries
+The libraries used in the 'Top Rated Movies' App are as follows:
+1. Retrofit
+2. GSON
+3. Butterknife
+4. Picasso
+5. RecyclerView
+6. CardView
+7. CircleImageView
+
 # Movies API
 1. BASE URL http://api.themoviedb.org/3/
 2. MOVIE API KEY 06b3e2bcc5baf7b7cc892a9404d7af85
