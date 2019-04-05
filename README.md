@@ -1,5 +1,5 @@
 # Top Rated Movies
-This App shows the current top rated movies on the TMDB database.
+This App shows the current top rated movies in the TMDB database.
 
 # How to build and test 'Top Rated Movies' App
 
