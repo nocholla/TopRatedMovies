@@ -68,7 +68,6 @@ public class MoviesRecyclerViewGridAdapter extends RecyclerView.Adapter<MoviesRe
 
         String movieOriginalLanguage = movie.getOriginalLanguage();
         Log.d("DEBUG MOVIE LANGUAGE", movieOriginalLanguage);
-
     }
 
     @Override

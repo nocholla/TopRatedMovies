@@ -7,6 +7,7 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Menu;
@@ -22,6 +23,7 @@ import com.nocholla.top.rated.movies.features.grid_view.GridViewActivity;
 import com.nocholla.top.rated.movies.model.Movie;
 import com.nocholla.top.rated.movies.model.MoviesResponse;
 import com.nocholla.top.rated.movies.util.Constants;
+import java.util.ArrayList;
 import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -39,6 +41,10 @@ public class ListViewActivity extends AppCompatActivity {
     BottomNavigationView navigation;
     @BindView(R.id.cview_top_rated_movies)
     CardView mCardviewTopRatedMoviesIntro;
+
+    // Movie List
+    private MoviesRecyclerViewListAdapter moviesRecyclerViewListAdapter;
+    private ArrayList<Movie> movieList;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -87,11 +93,13 @@ public class ListViewActivity extends AppCompatActivity {
         // Card View
         mCardviewTopRatedMoviesIntro.setRadius(30);
 
-
+        //recyclerView = findViewById(R.id.recyclerView);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(moviesRecyclerViewListAdapter);
 
         // Get Movies Top Rated List
         getMoviesTopRatedList();
-
     }
 
     /**
