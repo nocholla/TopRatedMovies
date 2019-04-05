@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp">
+
+    <!-- About Us -->
+    <LinearLayout
+        android:id="@+id/bottom_sheet_about_us"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/padding_ten"
+        android:paddingLeft="@dimen/padding_ten"
+        android:paddingRight="@dimen/padding_ten"
+        android:paddingTop="@dimen/padding_ten">
+
+        <ImageView
+            android:layout_width="@dimen/width_twenty_five"
+            android:layout_height="@dimen/height_twenty_five"
+            android:layout_marginRight="@dimen/margin_thirty_five"
+            android:src="@drawable/ic_info_outline_white_24dp"
+            android:tint="@color/colorPrimary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/title_about_us"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <!-- Help -->
+    <LinearLayout
+        android:id="@+id/bottom_sheet_help"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/padding_ten"
+        android:paddingLeft="@dimen/padding_ten"
+        android:paddingRight="@dimen/padding_ten"
+        android:paddingTop="@dimen/padding_ten">
+
+        <ImageView
+            android:layout_width="@dimen/width_twenty_five"
+            android:layout_height="@dimen/height_twenty_five"
+            android:layout_marginRight="@dimen/margin_thirty_five"
+            android:src="@drawable/ic_help_outline_white_24dp"
+            android:tint="@color/colorPrimary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/title_help"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <!-- Share -->
+    <LinearLayout
+        android:id="@+id/bottom_sheet_share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/padding_ten"
+        android:paddingLeft="@dimen/padding_ten"
+        android:paddingRight="@dimen/padding_ten"
+        android:paddingTop="@dimen/padding_ten">
+
+        <ImageView
+            android:layout_width="@dimen/width_twenty_five"
+            android:layout_height="@dimen/height_twenty_five"
+            android:layout_marginRight="@dimen/margin_thirty_five"
+            android:src="@drawable/ic_share_white_24dp"
+            android:tint="@color/colorPrimary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/title_share"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <!-- Contact Us -->
+    <LinearLayout
+        android:id="@+id/bottom_sheet_contact_us"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/padding_ten"
+        android:paddingLeft="@dimen/padding_ten"
+        android:paddingRight="@dimen/padding_ten"
+        android:paddingTop="@dimen/padding_ten">
+
+        <ImageView
+            android:layout_width="@dimen/width_twenty_five"
+            android:layout_height="@dimen/height_twenty_five"
+            android:layout_marginRight="@dimen/margin_thirty_five"
+            android:src="@drawable/ic_mail_outline_white_24dp"
+            android:tint="@color/colorPrimary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/title_contact_us"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

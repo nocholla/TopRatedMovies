@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/layout_height_one_hundred_thirty"
+    android:background="@color/background_grey">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:layout_marginTop="@dimen/margin_eight"
+        android:layout_marginBottom="@dimen/margin_eight"
+        app:cardElevation="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Movie Poster -->
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgview_movie_poster"
+                android:layout_width="@dimen/width_sixty"
+                android:layout_height="@dimen/height_sixty"
+                android:layout_marginStart="@dimen/margin_eight"
+                android:layout_marginLeft="@dimen/margin_eight"
+                android:layout_marginTop="@dimen/margin_eight"
+                android:paddingBottom="@dimen/padding_eight"
+                android:src="@drawable/movie"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Movie Title -->
+            <TextView
+                android:id="@+id/tview_movie_title"
+                android:layout_width="@dimen/width_zero"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_eight"
+                android:layout_marginLeft="@dimen/margin_eight"
+                android:layout_marginTop="@dimen/margin_eight"
+                android:paddingRight="@dimen/padding_eight"
+                android:textColor="@color/text_black"
+                android:text="@string/movie_title"
+                android:textSize="@dimen/text_sixteen"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/imgview_movie_poster"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Movie Overview -->
+            <TextView
+                android:id="@+id/tview_movie_overview"
+                android:layout_width="@dimen/width_zero"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_eight"
+                android:layout_marginLeft="@dimen/margin_eight"
+                android:paddingRight="@dimen/padding_eight"
+                android:textColor="@color/text_grey"
+                android:text="@string/movie_overview"
+                android:textSize="@dimen/text_twelve"
+                android:maxLines="3"
+                android:ellipsize="end"
+                app:layout_constraintStart_toEndOf="@+id/imgview_movie_poster"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tview_movie_title" />
+
+            <!-- Movie Release Date -->
+            <TextView
+                android:id="@+id/tview_movie_release_date"
+                android:layout_width="@dimen/width_zero"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_eight"
+                android:layout_marginLeft="@dimen/margin_eight"
+                android:paddingRight="@dimen/padding_eight"
+                android:textColor="@color/text_grey"
+                android:text="@string/movie_release_date"
+                android:textSize="@dimen/text_twelve"
+                android:maxLines="3"
+                app:layout_constraintStart_toEndOf="@+id/imgview_movie_poster"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tview_movie_overview" />
+
+            <!-- Movie Vote Average Star -->
+            <ImageView
+                android:id="@+id/imgview_movie_vote_average"
+                android:layout_width="@dimen/layout_width_fifteen"
+                android:layout_height="@dimen/layout_height_fifteen"
+                android:layout_marginStart="@dimen/margin_eight"
+                android:layout_marginLeft="@dimen/margin_eight"
+                android:layout_centerInParent="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/star"
+                android:tint="@color/colorAccent"
+                app:layout_constraintStart_toEndOf="@+id/imgview_movie_poster"
+                app:layout_constraintTop_toBottomOf="@+id/tview_movie_release_date" />
+
+            <!-- Movie Vote Average -->
+            <TextView
+                android:id="@+id/tview_movie_vote_average"
+                android:layout_width="@dimen/width_zero"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_eight"
+                android:layout_marginLeft="@dimen/margin_eight"
+                android:paddingRight="@dimen/padding_eight"
+                android:paddingBottom="@dimen/padding_eight"
+                android:textColor="@color/text_grey"
+                android:text="@string/movie_vote_average"
+                android:textSize="@dimen/text_twelve"
+                app:layout_constraintStart_toEndOf="@+id/imgview_movie_vote_average"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tview_movie_release_date" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<android.support.constraint.ConstraintLayout-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content">-->
+
+    <!--&lt;!&ndash; Movie Poster &ndash;&gt;-->
+    <!--<de.hdodenhof.circleimageview.CircleImageView-->
+        <!--android:id="@+id/imgview_movie_poster"-->
+        <!--android:layout_width="@dimen/width_sixty"-->
+        <!--android:layout_height="@dimen/height_sixty"-->
+        <!--android:layout_marginStart="@dimen/margin_eight"-->
+        <!--android:layout_marginLeft="@dimen/margin_eight"-->
+        <!--android:layout_marginTop="@dimen/margin_eight"-->
+        <!--android:paddingBottom="@dimen/padding_eight"-->
+        <!--android:src="@drawable/movie"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--&lt;!&ndash; Movie Title &ndash;&gt;-->
+    <!--<TextView-->
+        <!--android:id="@+id/tview_movie_title"-->
+        <!--android:layout_width="@dimen/width_zero"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="@dimen/margin_eight"-->
+        <!--android:layout_marginLeft="@dimen/margin_eight"-->
+        <!--android:layout_marginTop="@dimen/margin_eight"-->
+        <!--android:textColor="@color/text_black"-->
+        <!--android:text="@string/movie_title"-->
+        <!--android:textSize="@dimen/text_sixteen"-->
+        <!--android:textStyle="bold"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/imgview_movie_poster"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--&lt;!&ndash; Movie Overview &ndash;&gt;-->
+    <!--<TextView-->
+        <!--android:id="@+id/tview_movie_overview"-->
+        <!--android:layout_width="@dimen/width_zero"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="@dimen/margin_eight"-->
+        <!--android:layout_marginLeft="@dimen/margin_eight"-->
+        <!--android:textColor="@color/text_grey"-->
+        <!--android:text="@string/movie_overview"-->
+        <!--android:textSize="@dimen/text_twelve"-->
+        <!--android:maxLines="3"-->
+        <!--android:ellipsize="end"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/imgview_movie_poster"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/tview_movie_title" />-->
+
+    <!--&lt;!&ndash; Movie Release Date &ndash;&gt;-->
+    <!--<TextView-->
+        <!--android:id="@+id/tview_movie_release_date"-->
+        <!--android:layout_width="@dimen/width_zero"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="@dimen/margin_eight"-->
+        <!--android:layout_marginLeft="@dimen/margin_eight"-->
+        <!--android:textColor="@color/text_grey"-->
+        <!--android:text="@string/movie_release_date"-->
+        <!--android:textSize="@dimen/text_twelve"-->
+        <!--android:maxLines="3"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/imgview_movie_poster"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/tview_movie_overview" />-->
+
+    <!--&lt;!&ndash; Movie Vote Average Star &ndash;&gt;-->
+    <!--<ImageView-->
+        <!--android:id="@+id/imgview_movie_vote_average"-->
+        <!--android:layout_width="@dimen/layout_width_fifteen"-->
+        <!--android:layout_height="@dimen/layout_height_fifteen"-->
+        <!--android:layout_marginStart="@dimen/margin_eight"-->
+        <!--android:layout_marginLeft="@dimen/margin_eight"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:scaleType="centerCrop"-->
+        <!--android:src="@drawable/star"-->
+        <!--android:tint="@color/colorAccent"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/imgview_movie_poster"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/tview_movie_release_date" />-->
+
+    <!--&lt;!&ndash; Movie Vote Average &ndash;&gt;-->
+    <!--<TextView-->
+        <!--android:id="@+id/tview_movie_vote_average"-->
+        <!--android:layout_width="@dimen/width_zero"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="@dimen/margin_eight"-->
+        <!--android:layout_marginLeft="@dimen/margin_eight"-->
+        <!--android:textColor="@color/text_grey"-->
+        <!--android:text="@string/movie_vote_average"-->
+        <!--android:textSize="@dimen/text_twelve"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/imgview_movie_vote_average"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/tview_movie_release_date" />-->
+
+<!--</android.support.constraint.ConstraintLayout>-->

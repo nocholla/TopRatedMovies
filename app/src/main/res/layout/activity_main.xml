@@ -5,18 +5,68 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/movie_background"
     tools:context=".MainActivity">
 
+    <!-- Welcome Text -->
     <TextView
-        android:id="@+id/message"
-        android:layout_width="wrap_content"
+        android:id="@+id/tview_welcome"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/activity_horizontal_margin"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:text="@string/title_home"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="@dimen/margin_ten"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_white"
+        android:text="@string/lbl_welcome"
+        android:textSize="@dimen/text_thirty"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- Click Button Text -->
+    <TextView
+        android:id="@+id/tview_lbl_click_buttons"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_eight"
+        android:layout_marginRight="@dimen/margin_eight"
+        android:layout_marginStart="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_eight"
+        android:textColor="@color/text_white"
+        android:text="@string/lbl_click_buttons"
+        android:textSize="@dimen/text_sixteen"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:paddingLeft="@dimen/padding_five"
+        android:paddingRight="@dimen/padding_five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tview_welcome" />
+
+
+    <!-- Button View Movies -->
+    <Button
+        android:id="@+id/btn_view_movies"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_twenty"
+        android:layout_marginLeft="@dimen/margin_ten"
+        android:layout_marginRight="@dimen/margin_ten"
+        android:background="@drawable/button_shaded_radius_twenty"
+        android:text="@string/btn_view_movies"
+        android:textSize="@dimen/text_fifteen"
+        android:textColor="@color/text_white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/navigation" />
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"

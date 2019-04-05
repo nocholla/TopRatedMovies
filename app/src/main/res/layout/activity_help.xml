@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Urembo Help -->
+    <android.support.v7.widget.CardView
+        android:id="@+id/cview_help"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_marginTop="@dimen/margin_twenty"
+        android:layout_marginLeft="@dimen/margin_fifteen"
+        android:layout_marginRight="@dimen/margin_fifteen"
+        android:elevation="3dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:context=".MainActivity">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/padding_ten"
+                android:orientation="vertical" >
+
+                <!-- Begin Detail Section -->
+                <LinearLayout
+                    android:id="@+id/detailSection"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/margin_ten"
+                    android:layout_marginRight="@dimen/margin_ten"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/padding_ten"
+                    android:paddingTop="@dimen/padding_twenty" >
+
+                    <TextView
+                        android:id="@+id/appHelpDescription1ID"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_white"
+                        android:text="@string/menu_app_help_desc2"
+                        android:textSize="@dimen/text_fifteen"
+                        android:paddingBottom="@dimen/padding_five"
+                        android:paddingLeft="@dimen/padding_ten"
+                        android:paddingRight="@dimen/padding_ten"
+                        android:paddingTop="@dimen/padding_three" />
+
+                    <!-- Begin Share Section -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/imageShareID"
+                            android:layout_width="@dimen/image_twenty_five"
+                            android:layout_height="@dimen/image_twenty_five"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ic_share_white_24dp" />
+
+                        <TextView
+                            android:id="@+id/appHelpDescription15D"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_white"
+                            android:text="@string/menu_app_help_desc3"
+                            android:textSize="@dimen/text_fifteen"
+                            android:paddingBottom="@dimen/padding_five"
+                            android:paddingLeft="@dimen/padding_ten"
+                            android:paddingRight="@dimen/padding_ten"
+                            android:paddingTop="@dimen/padding_three" />
+
+                    </LinearLayout>
+                    <!-- End Share Section -->
+
+                    <!-- Begin Website Section -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/imageWebsiteUrlID"
+                            android:layout_width="@dimen/image_twenty_five"
+                            android:layout_height="@dimen/image_twenty_five"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ic_language_white_24dp" />
+
+                        <TextView
+                            android:id="@+id/appHelpDescription16D"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_white"
+                            android:text="@string/menu_app_help_desc4"
+                            android:textSize="@dimen/text_fifteen"
+                            android:paddingBottom="@dimen/padding_five"
+                            android:paddingLeft="@dimen/padding_ten"
+                            android:paddingRight="@dimen/padding_ten"
+                            android:paddingTop="@dimen/padding_three" />
+
+                    </LinearLayout>
+                    <!-- End Website Section -->
+
+                    <!-- Begin Facebook Section -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/imageFacebookUrlID"
+                            android:layout_width="@dimen/image_twenty_five"
+                            android:layout_height="@dimen/image_twenty_five"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ic_facebook_white_24dp" />
+
+                        <TextView
+                            android:id="@+id/appHelpDescription7ID"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_white"
+                            android:text="@string/menu_app_help_desc5"
+                            android:textSize="@dimen/text_fifteen"
+                            android:paddingBottom="@dimen/padding_five"
+                            android:paddingLeft="@dimen/padding_ten"
+                            android:paddingRight="@dimen/padding_ten"
+                            android:paddingTop="@dimen/padding_three" />
+
+                    </LinearLayout>
+                    <!-- End Facebook Section -->
+
+                    <!-- Begin Twitter Section -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/imageTwitterUrlID"
+                            android:layout_width="@dimen/image_twenty_five"
+                            android:layout_height="@dimen/image_twenty_five"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ic_twitter_white_24dp" />
+
+                        <TextView
+                            android:id="@+id/appHelpDescription8ID"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_white"
+                            android:text="@string/menu_app_help_desc6"
+                            android:textSize="@dimen/text_fifteen"
+                            android:paddingBottom="@dimen/padding_five"
+                            android:paddingLeft="@dimen/padding_ten"
+                            android:paddingRight="@dimen/padding_ten"
+                            android:paddingTop="@dimen/padding_three" />
+
+                    </LinearLayout>
+                    <!-- End Twitter Section -->
+
+                </LinearLayout>
+                <!-- End Detail Section -->
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </android.support.v7.widget.CardView>
+
+
+
+</android.support.constraint.ConstraintLayout>
+
+
+
+

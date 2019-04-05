@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/margin_sixty"
+        tools:context=".MainActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            app:layout_constraintTop_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:context=".MainActivity">
+
+            <android.support.constraint.ConstraintLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".authentication.profile_business_urembo_glam.ProfileBusinessUremboGlamActivity">
+
+                <!-- Movie Image  -->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cview_movie_poster"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryDark"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:layout_marginTop="@dimen/margin_twenty"
+                    android:layout_marginLeft="@dimen/margin_fifteen"
+                    android:layout_marginRight="@dimen/margin_fifteen"
+                    android:elevation="3dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@color/colorPrimaryDark"
+                        android:layout_marginLeft="@dimen/margin_ten"
+                        android:layout_marginRight="@dimen/margin_ten"
+                        android:orientation="vertical" >
+
+                        <!-- Movie Poster -->
+                        <ImageView
+                            android:id="@+id/imgview_movie_poster"
+                            android:layout_width="@dimen/layout_width_three_hundred"
+                            android:layout_height="@dimen/layout_height_three_hundred"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/movie" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!-- Horizontal Line -->
+                <View
+                    android:id="@+id/hline_movie_one"
+                    android:layout_marginTop="@dimen/margin_twenty"
+                    android:layout_marginBottom="@dimen/margin_twenty"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/height_one"
+                    android:background="@color/background_grey_dark"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cview_movie_poster"/>
+
+                <!-- Movie Details -->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cview_movie_details"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryDark"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:layout_marginTop="@dimen/margin_twenty"
+                    android:layout_marginLeft="@dimen/margin_fifteen"
+                    android:layout_marginRight="@dimen/margin_fifteen"
+                    android:elevation="3dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/hline_movie_one">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@color/colorPrimaryDark"
+                        android:orientation="vertical" >
+
+                        <!-- Movie Title -->
+                        <TextView
+                            android:id="@+id/tview_movie_detail_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/padding_ten"
+                            android:paddingStart="@dimen/padding_ten"
+                            android:paddingRight="@dimen/padding_ten"
+                            android:paddingEnd="@dimen/padding_ten"
+                            android:paddingTop="@dimen/padding_ten"
+                            android:layout_gravity="left"
+                            android:textColor="@color/text_white"
+                            android:text="@string/movie_title"
+                            android:textSize="@dimen/text_twenty"
+                            android:textStyle="bold" />
+
+                        <!-- Movie Overview -->
+                        <TextView
+                            android:id="@+id/tview_movie_detail_overview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/padding_ten"
+                            android:paddingStart="@dimen/padding_ten"
+                            android:paddingRight="@dimen/padding_ten"
+                            android:paddingEnd="@dimen/padding_ten"
+                            android:paddingTop="@dimen/padding_ten"
+                            android:layout_gravity="left"
+                            android:text="@string/movie_overview"
+                            android:textColor="@color/text_white"
+                            android:textSize="@dimen/text_fourteen" />
+
+                        <!-- Movie Release date -->
+                        <TextView
+                            android:id="@+id/tview_movie_detail_release_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/padding_ten"
+                            android:paddingStart="@dimen/padding_ten"
+                            android:paddingRight="@dimen/padding_ten"
+                            android:paddingEnd="@dimen/padding_ten"
+                            android:paddingTop="@dimen/padding_ten"
+                            android:layout_gravity="left"
+                            android:text="@string/movie_release_date"
+                            android:textColor="@color/text_white"
+                            android:textSize="@dimen/text_fourteen" />
+
+                        <!-- Movie Rated -->
+                        <TextView
+                            android:id="@+id/tview_movie_detail_vote_average"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/padding_ten"
+                            android:paddingStart="@dimen/padding_ten"
+                            android:paddingRight="@dimen/padding_ten"
+                            android:paddingEnd="@dimen/padding_ten"
+                            android:paddingTop="@dimen/padding_ten"
+                            android:layout_gravity="left"
+                            android:text="@string/movie_vote_average"
+                            android:textColor="@color/text_white"
+                            android:textSize="@dimen/text_fourteen" />
+
+                        <!-- Movie Original Language -->
+                        <TextView
+                            android:id="@+id/tview_movie_detail_original_language"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/padding_ten"
+                            android:paddingStart="@dimen/padding_ten"
+                            android:paddingRight="@dimen/padding_ten"
+                            android:paddingBottom="@dimen/padding_ten"
+                            android:paddingEnd="@dimen/padding_ten"
+                            android:paddingTop="@dimen/padding_ten"
+                            android:layout_gravity="left"
+                            android:text="@string/movie_original_language"
+                            android:textColor="@color/text_white"
+                            android:textSize="@dimen/text_fourteen" />
+
+                        <!-- Horizontal Line -->
+                        <View
+                            android:id="@+id/horizontal_line"
+                            android:layout_marginTop="@dimen/margin_five"
+                            android:layout_marginBottom="@dimen/margin_five"
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/height_one"
+                            android:background="@color/background_white"/>
+
+                        <!-- Begin Social Section -->
+                        <LinearLayout
+                            android:id="@+id/socialSection"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingLeft="@dimen/padding_ten"
+                            android:paddingRight="@dimen/padding_ten"
+                            android:paddingTop="@dimen/padding_fifteen"
+                            android:paddingBottom="@dimen/padding_fifteen"
+                            android:weightSum="4">
+
+                            <!-- Share -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <ImageButton
+                                    android:id="@+id/imgbtn_share"
+                                    android:layout_width="@dimen/image_twenty_five"
+                                    android:layout_height="@dimen/image_twenty_five"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/ic_share_white_24dp" />
+
+                            </LinearLayout>
+
+                            <!-- Website -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <ImageButton
+                                    android:id="@+id/imgbtn_website"
+                                    android:layout_width="@dimen/image_twenty_five"
+                                    android:layout_height="@dimen/image_twenty_five"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/ic_language_white_24dp" />
+
+                            </LinearLayout>
+
+                            <!-- Facebook -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <ImageButton
+                                    android:id="@+id/imgbtn_facebook"
+                                    android:layout_width="@dimen/image_twenty_five"
+                                    android:layout_height="@dimen/image_twenty_five"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/ic_facebook_white_24dp" />
+
+                            </LinearLayout>
+
+                            <!-- Twitter -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <ImageButton
+                                    android:id="@+id/imgbtn_twitter"
+                                    android:layout_width="@dimen/image_twenty_five"
+                                    android:layout_height="@dimen/image_twenty_five"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/ic_twitter_white_24dp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        <!-- End Social Section -->
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!-- Horizontal Line -->
+                <View
+                    android:id="@+id/hline_movie_two"
+                    android:layout_marginTop="@dimen/margin_twenty"
+                    android:layout_marginBottom="@dimen/margin_twenty"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/height_one"
+                    android:background="@color/background_grey_dark"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cview_movie_details"/>
+
+            </android.support.constraint.ConstraintLayout>
+
+        </ScrollView>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/navigation" />
+
+</android.support.constraint.ConstraintLayout>
+
+
+
+
