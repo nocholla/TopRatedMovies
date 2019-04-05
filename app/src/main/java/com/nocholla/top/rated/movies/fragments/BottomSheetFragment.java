@@ -14,12 +14,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.Toast;
-
 import com.nocholla.top.rated.movies.R;
 import com.nocholla.top.rated.movies.features.about_us.AboutUsActivity;
 import com.nocholla.top.rated.movies.features.help.HelpActivity;
 import com.nocholla.top.rated.movies.util.Constants;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;

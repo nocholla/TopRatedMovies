@@ -6,9 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.view.MenuItem;
-
 import com.nocholla.top.rated.movies.R;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 

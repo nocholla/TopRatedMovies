@@ -8,13 +8,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.Toast;
 import com.nocholla.top.rated.movies.MovieDetailActivity;
 import com.nocholla.top.rated.movies.R;
 import com.nocholla.top.rated.movies.model.Movie;
 import com.nocholla.top.rated.movies.util.Constants;
 import com.squareup.picasso.Picasso;
-
 import java.util.ArrayList;
 import java.util.List;
 

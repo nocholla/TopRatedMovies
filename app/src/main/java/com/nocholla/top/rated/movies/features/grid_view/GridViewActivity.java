@@ -15,7 +15,6 @@ import android.view.Menu;
 import android.widget.Toast;
 import android.support.annotation.NonNull;
 import android.view.MenuItem;
-
 import com.nocholla.top.rated.movies.MainActivity;
 import com.nocholla.top.rated.movies.R;
 import com.nocholla.top.rated.movies.adapter.MoviesRecyclerViewGridAdapter;
@@ -26,9 +25,7 @@ import com.nocholla.top.rated.movies.helper.GalleryGridSpacingItemDecoration;
 import com.nocholla.top.rated.movies.model.Movie;
 import com.nocholla.top.rated.movies.model.MoviesResponse;
 import com.nocholla.top.rated.movies.util.Constants;
-
 import java.util.List;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import retrofit2.Call;
