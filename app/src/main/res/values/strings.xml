@@ -1,0 +1,116 @@
+<resources>
+    <string name="app_name">Top Rated Movies</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <!-- BEGIN: General -->
+    <string name="title_movies">Movies</string>
+    <string name="title_grid">Grid</string>
+    <string name="title_linear">Linear</string>
+    <!--// END: General -->
+
+    <!-- BEGIN: Top Rated Movies -->
+    <string name="top_rated_movies_title">Check out our top rated movies</string>
+    <string name="top_rated_movies_intro">Click movie image to view movie details.</string>
+    <!--// END: Top Rated Movies -->
+
+    <!-- BEGIN: Login -->
+    <string name="lbl_welcome" translatable="false">Welcome</string>
+    <string name="lbl_click_buttons" translatable="false">Check out our top rated movies.</string>
+    <!--// END: Login -->
+
+    <!-- BEGIN: Buttons -->
+    <string name="btn_view_movies">View Movies</string>
+    <string name="loading">Loading...</string>
+    <!--// END: Buttons -->
+
+    <!-- BEGIN: Bottom Sheet -->
+    <string name="action_search">Search</string>
+    <string name="action_more">More</string>
+    <!--// END: Bottom Sheet -->
+
+    <!-- BEGIN: Menu -->
+    <string name="menu_movies">Movies</string>
+    <string name="menu_top_rated">Top Rated Movies</string>
+    <string name="menu_now_playing">Now Playing Movies</string>
+    <string name="menu_movie_detail">Movie Detail</string>
+    <string name="menu_about_us">About Us</string>
+    <string name="menu_help">Help</string>
+    <string name="menu_android_app">Android</string>
+    <string name="menu_android_app_version">App Version</string>
+    <string name="menu_app_version">1.0.0</string>
+    <string name="movie_count">1 of 20</string>
+    <!--// END: Menu -->
+
+    <!-- BEGIN: Movie -->
+    <string name="movie_vote_count">2676</string>
+    <string name="movie_id">335983</string>
+    <string name="movie_video">false</string>
+    <string name="movie_vote_average">6.5</string>
+    <string name="movie_title">Venom</string>
+    <string name="movie_popularity">490.168</string>
+    <string name="movie_original_language">en</string>
+    <string name="movie_original_title">Venom</string>
+    <string name="movie_backdrop_path">/VuukZLgaCrho2Ar8Scl9HtV3yD.jpg</string>
+    <string name="movie_adult">false</string>
+    <string name="movie_overview">Eddie Brock is a reporter—investigating people who want to go unnoticed. But after he makes a terrible discovery at the Life Foundation, he begins to transform into ‘Venom’.  The Foundation has discovered creatures called symbiotes, and believes they’re the key to the next step in human evolution. Unwittingly bonded with one, Eddie discovers he has incredible new abilities—and a voice in his head that’s telling him to embrace the darkness.</string>
+    <string name="movie_release_date">2018-10-03</string>
+    <string name="movie_page">1</string>
+    <string name="movie_total_results">1178</string>
+    <string name="movie_total_pages">59</string>
+    <!--// END: Movie -->
+
+    <!-- BEGIN: Toast -->
+    <string name="toast_no_api_key">Please obtain a MovieDB API KEY</string>
+    <string name="toast_home_page">You are in the Home Page</string>
+    <string name="toast_grid_page">You are in the Grid Page</string>
+    <string name="toast_movies_page">You are in the Movies Page</string>
+    <string name="toast_linear_page">You are in the Linear Page</string>
+    <string name="toast_no_app_to_share">No App to share</string>
+    <string name="toast_no_application_can_handle_this_request_email">No application can handle this request</string>
+    <string name="toast_no_application_can_handle_this_request_website">No Application can handle this request. Please provide us with your Movie Website Link or URL!</string>
+    <string name="toast_no_application_can_handle_this_request_facebook">No Application can handle this request. Please provide us with your Movie Facebook Link or URL!</string>
+    <string name="toast_no_application_can_handle_this_request_twitter">No Application can handle this request. Please provide us with your Movie Twitter Link or URL!</string>
+    <!--// END: Toast -->
+
+    <!-- BEGIN: Bottom Sheet Dialog -->
+    <string name="title_about_us">About Us</string>
+    <string name="title_help">Help</string>
+    <string name="title_share">Share</string>
+    <string name="title_contact_us">Contact Us</string>
+    <!--// END: Bottom Sheet Dialog -->
+
+    <!-- BEGIN: About Us -->
+    <string name="menu_about_us_desc1">The Movie Database (TMDb) is a community built movie and TV database. Every piece of data has been added by our amazing community dating back to 2008. TMDb\'s strong international focus and breadth of data is largely unmatched and something we\'re incredibly proud of. Put simply, we live and breathe community and that\'s precisely what makes us different.</string>
+    <string name="menu_about_us_desc2">1) Every year since 2008, the number of contributions to our database has increased. With over 200,000 developers and companies using our platform, TMDb has become a premiere source for metadata.</string>
+    <string name="menu_about_us_desc3">2) Along with extensive metadata for movies, TV shows and people, we also offer one of the best selections of high resolution posters and fanart. On average, over 1,000 images are added every single day.</string>
+    <string name="menu_about_us_desc4">3) We\'re international. While we officially support 39 languages we also have extensive regional data. Every single day TMDb is used in over 180 countries.</string>
+    <string name="menu_about_us_desc5">4) Our community is second to none. Between our staff and community moderators, we\'re always here to help. We\'re passionate about making sure your experience on TMDb is nothing short of amazing.</string>
+    <string name="menu_about_us_desc6">5) Trusted platform. Every single day our service is used by millions of people while we process over 3 billion requests. We\'ve proven for years that this is a service that can be trusted and relied on.</string>
+    <!--// END: About Us -->
+
+    <!-- BEGIN:: Help -->
+    <string name="menu_app_help_title">App Help</string>
+    <string name="menu_app_help_desc1">
+        This section will show you how to navigate through the App.
+    </string>
+    <string name="menu_app_help_desc2">
+        Click on the Movie image to view Movie details e.g. Movie Name, Movie Logo, Movie Description,
+        Movie Website, Movie Facebook Page and Movie Twitter Page.
+     </string>
+    <string name="menu_app_help_desc3">
+        Click on the Share icon to share the TMDB Movie details.
+    </string>
+    <string name="menu_app_help_desc4">
+        Click on the Globe icon to view the TMDB website.
+    </string>
+    <string name="menu_app_help_desc5">
+        Click on the Facebook icon to view the TMDB Facebook page.
+    </string>
+    <string name="menu_app_help_desc6">
+        Click on the Twitter icon to view the TMDB Twitter page.
+    </string>
+    <!--// END: Help -->
+
+</resources>
