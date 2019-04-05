@@ -1,4 +1,4 @@
-package com.nocholla.top.rated.movies.features.grid_view;
+package com.nocholla.top.rated.movies.features.list_view;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -7,8 +7,6 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Menu;
@@ -17,12 +15,10 @@ import android.support.annotation.NonNull;
 import android.view.MenuItem;
 import com.nocholla.top.rated.movies.MainActivity;
 import com.nocholla.top.rated.movies.R;
-import com.nocholla.top.rated.movies.adapter.MoviesRecyclerViewGridAdapter;
+import com.nocholla.top.rated.movies.adapter.MoviesRecyclerViewListAdapter;
 import com.nocholla.top.rated.movies.api.ApiClient;
 import com.nocholla.top.rated.movies.api.ApiInterface;
-import com.nocholla.top.rated.movies.features.list_view.ListViewActivity;
-import com.nocholla.top.rated.movies.fragments.BottomSheetFragment;
-import com.nocholla.top.rated.movies.helper.GalleryGridSpacingItemDecoration;
+import com.nocholla.top.rated.movies.features.grid_view.GridViewActivity;
 import com.nocholla.top.rated.movies.model.Movie;
 import com.nocholla.top.rated.movies.model.MoviesResponse;
 import com.nocholla.top.rated.movies.util.Constants;
@@ -33,11 +29,11 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class GridViewActivity extends AppCompatActivity {
-    private static final String TAG = GridViewActivity.class.getSimpleName();
+public class ListViewActivity extends AppCompatActivity {
+    private static final String TAG = ListViewActivity.class.getSimpleName();
 
     // ButterKnife
-    @BindView(R.id.movie_recycler_view_grid)
+    @BindView(R.id.movie_recycler_view_list)
     RecyclerView recyclerView;
     @BindView(R.id.navigation)
     BottomNavigationView navigation;
@@ -51,7 +47,7 @@ public class GridViewActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    startActivity(new Intent(GridViewActivity.this, MainActivity.class));
+                    startActivity(new Intent(ListViewActivity.this, MainActivity.class));
                     return true;
                 case R.id.navigation_movies:
                     Toast.makeText(getBaseContext(), getString(R.string.toast_movies_page), Toast.LENGTH_SHORT).show();
@@ -67,7 +63,7 @@ public class GridViewActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_grid_view);
+        setContentView(R.layout.activity_list_view);
 
         // Back Home
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -91,24 +87,17 @@ public class GridViewActivity extends AppCompatActivity {
         // Card View
         mCardviewTopRatedMoviesIntro.setRadius(30);
 
-        // Movie Grid Layout
-        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(GridViewActivity.this, 3);
-        recyclerView.setLayoutManager(mLayoutManager);
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
 
-        // Add spacing between photos in gallery
-        int spacingInPixels = getResources().getDimensionPixelSize(R.dimen.grid_layout_margin);
-        recyclerView.addItemDecoration(new GalleryGridSpacingItemDecoration(3, spacingInPixels, true, 0));
 
-        // Get Movies Top Rated Grid
-        getMoviesTopRatedGrid();
+        // Get Movies Top Rated List
+        getMoviesTopRatedList();
 
     }
 
     /**
-     * @method getMoviesTopRatedGrid
+     * @method getMoviesTopRatedList
      */
-    private void getMoviesTopRatedGrid() {
+    private void getMoviesTopRatedList() {
         // API Key Check
         if (Constants.API_KEY.isEmpty()) {
             Toast.makeText(getApplicationContext(), getString(R.string.toast_no_api_key), Toast.LENGTH_LONG).show();
@@ -129,7 +118,7 @@ public class GridViewActivity extends AppCompatActivity {
                 List<Movie> movieList = response.body().getResults();
 
                 // RecyclerView
-                recyclerView.setAdapter(new MoviesRecyclerViewGridAdapter(getApplicationContext(), movieList));
+                recyclerView.setAdapter(new MoviesRecyclerViewListAdapter(getApplicationContext(), movieList));
 
             }
 
@@ -142,9 +131,9 @@ public class GridViewActivity extends AppCompatActivity {
     }
 
     /**
-     * @method getMoviesNowPlayingGrid
+     * @method getMoviesNowPlayingList
      */
-    private void getMoviesNowPlayingGrid() {
+    private void getMoviesNowPlayingList() {
         // API Key Check
         if (Constants.API_KEY.isEmpty()) {
             Toast.makeText(getApplicationContext(), getString(R.string.toast_no_api_key), Toast.LENGTH_LONG).show();
@@ -165,7 +154,7 @@ public class GridViewActivity extends AppCompatActivity {
                 List<Movie> movies = response.body().getResults();
 
                 // RecyclerView
-                recyclerView.setAdapter(new MoviesRecyclerViewGridAdapter(getApplicationContext(), movies));
+                recyclerView.setAdapter(new MoviesRecyclerViewListAdapter(getApplicationContext(), movies));
             }
 
             @Override
@@ -190,7 +179,7 @@ public class GridViewActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_grid, menu);
+        getMenuInflater().inflate(R.menu.menu_list, menu);
         return true;
     }
 
@@ -203,8 +192,8 @@ public class GridViewActivity extends AppCompatActivity {
             case android.R.id.home:
                 onBackPressed();
                 return true;
-            case R.id.action_list:
-                startActivity(new Intent(this, ListViewActivity.class));
+            case R.id.action_grid:
+                startActivity(new Intent(this, GridViewActivity.class));
                 return true;
         }
         return super.onOptionsItemSelected(item);

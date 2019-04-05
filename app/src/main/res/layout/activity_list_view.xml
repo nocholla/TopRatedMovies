@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".features.grid_view.GridViewActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_top_rated_movies_intro"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/padding_eight"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" >
+
+        <!-- Begin Detail Section -->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/background_grey"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/padding_ten"
+            android:paddingTop="@dimen/padding_twenty" >
+
+            <!-- CREATE PROFILE -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/cview_top_rated_movies"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:backgroundTint="@color/colorPrimary"
+                android:clickable="true"
+                android:layout_marginLeft="@dimen/margin_fifteen"
+                android:layout_marginRight="@dimen/margin_fifteen"
+                android:elevation="3dp">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/bg_black_parent_rounded_corner"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_top_rated_movies_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/padding_ten"
+                        android:paddingStart="@dimen/padding_ten"
+                        android:paddingRight="@dimen/padding_ten"
+                        android:paddingEnd="@dimen/padding_ten"
+                        android:paddingTop="@dimen/padding_ten"
+                        android:gravity="left"
+                        android:text="@string/top_rated_movies_title"
+                        android:textColor="@color/text_white"
+                        android:textSize="@dimen/text_sixteen"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tv_top_rated_movies_intro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/padding_ten"
+                        android:paddingStart="@dimen/padding_ten"
+                        android:paddingRight="@dimen/padding_ten"
+                        android:paddingEnd="@dimen/padding_ten"
+                        android:layout_marginBottom="@dimen/padding_fifteen"
+                        android:gravity="left"
+                        android:text="@string/top_rated_movies_intro"
+                        android:textColor="@color/text_white"
+                        android:textSize="@dimen/text_twelve" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+        <!-- End Detail Section -->
+
+    </LinearLayout>
+
+    <!-- Begin RecyclerView  Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/margin_one_hundred"
+        android:layout_marginBottom="@dimen/margin_sixty"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/navigation">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/movie_recycler_view_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"/>
+
+    </LinearLayout>
+    <!-- End RecyclerView  Section -->
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/navigation" />
+
+</android.support.constraint.ConstraintLayout>
+
+

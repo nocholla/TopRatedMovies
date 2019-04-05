@@ -36,6 +36,7 @@
         <activity android:name=".features.about_us.AboutUsActivity" android:label="@string/menu_about_us"></activity>
         <activity android:name=".features.help.HelpActivity" android:label="@string/menu_help"></activity>
         <activity android:name=".features.grid_view.GridViewActivity" android:label="@string/menu_top_rated"></activity>
+        <activity android:name=".features.list_view.ListViewActivity" android:label="@string/menu_top_rated"></activity>
         <activity android:name=".MovieDetailActivity" android:label="@string/menu_movie_detail" ></activity>
 
     </application>
