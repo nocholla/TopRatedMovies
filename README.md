@@ -20,7 +20,7 @@ This App shows the current top rated movies on the TMDB database.
 14. Wait for build to complete.
 15. If successful, APK will be installed on Android Phone or Android Studio Emulator for App to be tested.
 
-# URL's
+# Movies API
 BASE URL http://api.themoviedb.org/3/
 MOVIE API KEY 06b3e2bcc5baf7b7cc892a9404d7af85
 MOVIE TOP RATED http://api.themoviedb.org/3/movie/top_rated?api_key=06b3e2bcc5baf7b7cc892a9404d7af85
