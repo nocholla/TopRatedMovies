@@ -16,6 +16,8 @@ import android.util.Log;
 import com.nocholla.top.rated.movies.R;
 import com.nocholla.top.rated.movies.util.Constants;
 import com.squareup.picasso.Picasso;
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class MoviesRecyclerViewListAdapter extends RecyclerView.Adapter<MoviesRecyclerViewListAdapter.ViewHolder>  {
     private Context context;
@@ -84,21 +86,21 @@ public class MoviesRecyclerViewListAdapter extends RecyclerView.Adapter<MoviesRe
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+        @BindView(R.id.imgview_movie_poster)
         ImageView poster;
+        @BindView(R.id.tview_movie_title)
         TextView title;
+        @BindView(R.id.tview_movie_overview)
         TextView overview;
+        @BindView(R.id.tview_movie_release_date)
         TextView releaseDate;
+        @BindView(R.id.tview_movie_vote_average)
         TextView voteAverage;
 
         public ViewHolder(View itemView, final Context ctx) {
             super(itemView);
             context = ctx;
-
-            poster = itemView.findViewById(R.id.imgview_movie_poster);
-            title = itemView.findViewById(R.id.tview_movie_title);
-            overview = itemView.findViewById(R.id.tview_movie_overview);
-            releaseDate = itemView.findViewById(R.id.tview_movie_release_date);
-            voteAverage = itemView.findViewById(R.id.tview_movie_vote_average);
+            ButterKnife.bind(this, itemView);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

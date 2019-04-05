@@ -15,6 +15,8 @@ import com.nocholla.top.rated.movies.util.Constants;
 import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class MoviesRecyclerViewGridAdapter extends RecyclerView.Adapter<MoviesRecyclerViewGridAdapter.ViewHolder> {
     private Context context;
@@ -82,13 +84,13 @@ public class MoviesRecyclerViewGridAdapter extends RecyclerView.Adapter<MoviesRe
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+        @BindView(R.id.thumbnail)
         ImageView thumbnail;
 
         public ViewHolder(View itemView, final Context ctx) {
             super(itemView);
             context = ctx;
-
-            thumbnail = itemView.findViewById(R.id.thumbnail);
+            ButterKnife.bind(this, itemView);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
