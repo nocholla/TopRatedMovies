@@ -29,6 +29,7 @@ The libraries used in the 'Top Rated Movies' App are as follows:
 5. RecyclerView
 6. CardView
 7. CircleImageView
+8. OkHttp
 
 # Movies API
 1. BASE URL http://api.themoviedb.org/3/
