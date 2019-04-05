@@ -42,10 +42,6 @@ public class ListViewActivity extends AppCompatActivity {
     @BindView(R.id.cview_top_rated_movies)
     CardView mCardviewTopRatedMoviesIntro;
 
-    // Movie List
-    private MoviesRecyclerViewListAdapter moviesRecyclerViewListAdapter;
-    private ArrayList<Movie> movieList;
-
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -93,10 +89,9 @@ public class ListViewActivity extends AppCompatActivity {
         // Card View
         mCardviewTopRatedMoviesIntro.setRadius(30);
 
-        //recyclerView = findViewById(R.id.recyclerView);
+        // Recyclerview
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(moviesRecyclerViewListAdapter);
 
         // Get Movies Top Rated List
         getMoviesTopRatedList();
